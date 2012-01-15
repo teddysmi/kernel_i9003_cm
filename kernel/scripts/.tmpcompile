@@ -1,0 +1,8 @@
+/* This file is auto generated, version 0 */
+#define UTS_MACHINE ""
+#define UTS_VERSION "#0 Sun Jan 15 18:39:08 CET 2012"
+#define LINUX_COMPILE_TIME "18:39:08"
+#define LINUX_COMPILE_BY "vurrut"
+#define LINUX_COMPILE_HOST "ubuntu"
+#define LINUX_COMPILE_DOMAIN "(none)"
+#define LINUX_COMPILER "/home/ivan/kernel_i9003_cm/kernel/scripts/mkcompile_h: 82: -v: not found"

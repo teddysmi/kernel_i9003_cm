@@ -3,6 +3,7 @@ vurrutKER for cm7/miui v1
 -Governors(smartass v1 and v2,smothass,interactivex,...)
 -Shedulers (noop,cfq,bfq,deadline)
 -Add fifth step (5 opp)--_patch de Bill Varney omapzoom
--Voltaje ajustement (undervolting)(thanks to xda_bam)(in progress)
--small adjustments(in progress)
+-Voltaje ajustement (undervolting)(thanks to xda_bam)
+-small adjustments
+-tuned a governors(in progress)
 

@@ -83,12 +83,12 @@ static struct omap_volt_vc_data vc_config = {
 	/* MPU */
 	.vdd0_on = 1200000,	/* 1.2v */
 	.vdd0_onlp = 1000000,	/* 1.0v */
-	.vdd0_ret = 975000,	/* 0.975v */
+	.vdd0_ret = 900000,	/* 0.975v */
 	.vdd0_off = 600000,	/* 0.6v */
 	/* CORE */
 	.vdd1_on = 1150000,	/* 1.15v */
 	.vdd1_onlp = 1000000,	/* 1.0v */
-	.vdd1_ret = 975000,	/* 0.975v */
+	.vdd1_ret = 900000,	/* 0.975v */
 	.vdd1_off = 600000,	/* 0.6v */
 
 	.clksetup = 0xff,
@@ -435,6 +435,11 @@ struct opp_frequencies {
 
 static struct opp_frequencies opp_freq_add_table[] __initdata = {
   {
+	.mpu = 120000000,
+	.iva = 100000000,
+	.ena = OMAP3630_CONTROL_FUSE_OPP1_LOW,
+  },
+  {
 	.mpu = 800000000,
 	.iva = 660000000,
 	.ena = OMAP3630_CONTROL_FUSE_OPP120_VDD1,
@@ -445,12 +450,26 @@ static struct opp_frequencies opp_freq_add_table[] __initdata = {
 	.ena = OMAP3630_CONTROL_FUSE_OPP1G_VDD1,
   },
   {
-	.mpu = 1200000000,
-	.iva =  900000000,
+	.mpu = 1000000000,
+	.iva =  860000000,
 	.ena = OMAP3630_CONTROL_FUSE_OPP1_2G_VDD1,
   },
-
-  { 0, 0, 0 },
+  {
+	.mpu = 1200000000,
+	.iva =  870000000,
+	.ena = OMAP3630_CONTROL_FUSE_OPP1_3G_VDD1,
+  },
+   {
+	.mpu = 1300000000,
+	.iva =  880000000,
+	.ena = OMAP3630_CONTROL_FUSE_OPP1_4G_VDD1,
+  },
+  {
+	.mpu = 1350000000,
+	.iva =  900000000,
+	.ena = OMAP3630_CONTROL_FUSE_OPP1_5G_VDD1,
+  }, 	
+  { 0, 0, 0, 0 ,0 ,0 ,0 },
 };
 
 static void __init omap_board_init(void)
